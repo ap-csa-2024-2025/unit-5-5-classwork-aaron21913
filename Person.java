@@ -32,6 +32,27 @@ public class Person
     {
         return ssn;
     }
+    
+    public void setAge(int personAge) 
+    {
+        if (personAge >= 0) 
+        {
+            age = personAge;
+        } 
+        else {
+            System.out.println("Age must be a non-negative value.");
+        }
+    }
+    
+     public void setSsn(String personSsn) 
+    {
+        if (personSsn.length() == 9 && personSsn.matches("\\d+")) 
+        {
+            ssn = personSsn;
+        } else {
+            System.out.println("SSN must be a 9-digit number.");
+        }
+    }
 
     
 }
